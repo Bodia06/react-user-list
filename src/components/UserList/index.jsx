@@ -9,7 +9,6 @@ class UserList extends Component {
 		this.state = {
 			users: [],
 		}
-		this.isSelected = false
 	}
 
 	componentDidMount() {
