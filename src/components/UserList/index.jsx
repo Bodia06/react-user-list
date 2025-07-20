@@ -34,28 +34,23 @@ class UserList extends Component {
 		const { users } = this.state
 		const foundUser = users.findIndex((user) => user.id === userId)
 		const newUsers = [...users]
-		if (users[foundUser].isSelected) {
-			newUsers.splice(foundUser, 1)
-			this.setState({
-				users: newUsers,
-			})
-		} else {
-			alert('You must select the user before deleting it.')
-		}
+		newUsers.splice(foundUser, 1)
+		this.setState({
+			users: newUsers,
+		})
 	}
 
 	render() {
 		return (
-			<ul className={styles.UserList}>
+			<ul className={styles.userList}>
 				{this.state.users.map((user) => (
-					<li
+					<UserListItem
+						user={user}
+						userDeleted={this.userDeleted}
+						userSelected={this.userSelected}
+						isSelected={user.isSelected}
 						key={user.id}
-						className={styles.UserListItem}
-						style={{ border: user.isSelected ? '1px solid green' : '' }}
-						onClick={() => this.userSelected(user.id)}
-					>
-						<UserListItem user={user} userDeleted={this.userDeleted} />
-					</li>
+					></UserListItem>
 				))}
 			</ul>
 		)

@@ -1,4 +1,15 @@
-.UserListItemInfo {
+.userListItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.25rem;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 0.625rem;
+}
+
+.userListItemInfo {
 	display: flex;
 	align-items: flex-start;
 	width: 100%;
@@ -6,7 +17,7 @@
 	gap: 0.625rem;
 }
 
-.UserListItemInfoImg {
+.userListItemInfoImg {
 	width: 50px;
 	height: 50px;
 	border: 2px solid #800080;
@@ -15,25 +26,25 @@
 	object-position: top;
 }
 
-.UserListItemInfoText {
+.userListItemInfoText {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 }
 
-.UserListItemInfoTextName {
+.userListItemInfoTextName {
 	font-weight: normal;
 	font-size: 1.2em;
 	color: #333;
 }
 
-.UserListItemInfoTextAge {
+.userListItemInfoTextAge {
 	font-weight: normal;
 	font-size: 0.96em;
 	color: #666;
 }
 
-.UserListItemDeleteBtn {
+.userListItemDeleteBtn {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
@@ -45,6 +56,6 @@
 	transition: all 0.3s ease;
 }
 
-.UserListItemDeleteBtn:hover {
+.userListItemDeleteBtn:hover {
 	transform: scale(1.1);
 }
